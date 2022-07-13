@@ -1,0 +1,8 @@
+.socialBarre {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=socialBarre.css.map */
