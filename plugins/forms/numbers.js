@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+
     function quantityInput(element, options) {
         const spinner = element;
 
@@ -80,4 +80,3 @@ window.addEventListener("DOMContentLoaded", (event) => {
         };
         return obj.init();
     }
-});
