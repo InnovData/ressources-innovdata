@@ -90,6 +90,7 @@ const dom = document.querySelector("html");
     var SELECTOR = "input:not([type^=hidden]):not([type^=submit]), select, textarea";
     var ALLOWED_ATTRIBUTES = ["required", "min", "max", 'minlength', 'maxlength', 'pattern'];
     var EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var TEL_REGEX = /^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$/;
 
     var MESSAGE_REGEX = /-message(?:-([a-z]{2}(?:_[A-Z]{2})?))?/; // matches, -message, -message-en, -message-en_US
     var currentLocale = getLang(dom);
@@ -106,7 +107,11 @@ const dom = document.querySelector("html");
         }, priority: 0 });
     _('required', { fn: function fn(val) {
             return this.type === 'radio' || this.type === 'checkbox' ? groupedElemCount(this) : val !== undefined && val.trim() !== '';
-        }, priority: 99, halt: true });
+    }, priority: 99, halt: true
+        });
+    _('tel', { fn: function fn(val) {
+        return !val || TEL_REGEX.test(val);
+        } });    
     _('email', { fn: function fn(val) {
             return !val || EMAIL_REGEX.test(val);
         } });
