@@ -25,18 +25,18 @@ function quantityInput(element, options) {
         const qUp = document.createElement("div");
         const qDown = document.createElement("div");
 
-        qNav.setAttribute("class", "quantity-nav");
-        qUp.setAttribute("class", "quantity-button quantity-button--up");
-        qDown.setAttribute("class", "quantity-button quantity-button--down");
+        qNav.setAttribute("class", "quantity__nav");
+        qUp.setAttribute("class", "quantity__button--up");
+        qDown.setAttribute("class", "quantity__button--down");
 
-        qUp.innerHTML = "+";
-        qDown.innerHTML = "-";
+        // qUp.innerHTML = "+";
+        // qDown.innerHTML = "-";
         qNav.appendChild(qUp);
         qNav.appendChild(qDown);
         spinner.appendChild(qNav);
 
-        this.btnUp = spinner.querySelector(".quantity-button--up");
-        this.btnDown = spinner.querySelector(".quantity-button--down");
+        this.btnUp = spinner.querySelector(".quantity__button--up");
+        this.btnDown = spinner.querySelector(".quantity__button--down");
         },
         trigger() {
         const event = document.createEvent("HTMLEvents");

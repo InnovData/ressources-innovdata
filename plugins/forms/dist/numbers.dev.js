@@ -22,16 +22,16 @@ function quantityInput(element, options) {
       var qNav = document.createElement("div");
       var qUp = document.createElement("div");
       var qDown = document.createElement("div");
-      qNav.setAttribute("class", "quantity-nav");
-      qUp.setAttribute("class", "quantity-button quantity-button--up");
-      qDown.setAttribute("class", "quantity-button quantity-button--down");
-      qUp.innerHTML = "+";
-      qDown.innerHTML = "-";
+      qNav.setAttribute("class", "quantity__nav");
+      qUp.setAttribute("class", "quantity__button--up");
+      qDown.setAttribute("class", "quantity__button--down"); // qUp.innerHTML = "+";
+      // qDown.innerHTML = "-";
+
       qNav.appendChild(qUp);
       qNav.appendChild(qDown);
       spinner.appendChild(qNav);
-      this.btnUp = spinner.querySelector(".quantity-button--up");
-      this.btnDown = spinner.querySelector(".quantity-button--down");
+      this.btnUp = spinner.querySelector(".quantity__button--up");
+      this.btnDown = spinner.querySelector(".quantity__button--down");
     },
     trigger: function trigger() {
       var event = document.createEvent("HTMLEvents");
