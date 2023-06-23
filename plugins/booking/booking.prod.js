@@ -1,0 +1,1 @@
+"use strict";window.onload=function(){document.querySelector("#booking__picker ~ .flatpickr-calendar").classList.add("booking__picker")};
