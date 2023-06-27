@@ -33,15 +33,10 @@ function () {
       // Initialise la valeur, le minimum et le maximum du champ de quantité
       this.el.value = this.options.value;
       this.max = this.options.max;
-      this.min = this.options.min; // Crée les éléments HTML pour les boutons
-
-      var qNav = document.createElement('div');
-      var qUp = document.createElement('div');
-      var qDown = document.createElement('div'); // Ajoute les classes CSS aux éléments HTML
-
-      qNav.setAttribute('class', 'quantity__nav');
-      qUp.setAttribute('class', 'quantity__button--up');
-      qDown.setAttribute('class', 'quantity__button--down'); // Initialise la valeur du champ de quantité
+      this.min = this.options.min;
+      var qNav = document.querySelector('.quantity__nav');
+      var qUp = document.querySelector('.quantity__button--up');
+      var qDown = document.querySelector('.quantity__button--down'); // Initialise la valeur du champ de quantité
 
       this.input.setAttribute('value', this.el.value); // Ajoute les boutons à l'élément HTML
 
@@ -49,8 +44,8 @@ function () {
       qNav.appendChild(qDown);
       this.el.appendChild(qNav); // Stocke les boutons pour pouvoir y accéder plus facilement
 
-      this.btnUp = this.el.querySelector('.quantity__button--up');
-      this.btnDown = this.el.querySelector('.quantity__button--down');
+      this.btnUp = qUp;
+      this.btnDown = qDown;
     }
   }, {
     key: "events",
