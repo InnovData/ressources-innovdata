@@ -78,12 +78,12 @@ const dom = document.querySelector("html");
     }
 
     var defaultConfig = {
-        classTo: 'field__row',
-        errorClass: 'field--danger',
-        successClass: 'field--success',
-        errorTextParent: 'field__row',
+        classTo: 'ps-control',
+        errorClass: 'ps--danger',
+        successClass: 'ps--success',
+        errorTextParent: 'ps-control',
         errorTextTag: 'div',
-        errorTextClass: 'form__message'
+        errorTextClass: 'ps-message'
     };
 
     var PRISTINE_ERROR = 'pristine-error';
