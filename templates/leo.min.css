@@ -858,7 +858,8 @@ select {
 }
 
 .bg-secondary {
-    background-color: var(--color2-500)
+    background-color: var(--color2-500);
+    word-break: break-word;
 }
 
 .bg-white {
