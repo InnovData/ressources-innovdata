@@ -859,7 +859,6 @@ select {
 
 .bg-secondary {
     background-color: var(--color2-500);
-    word-break: break-word;
 }
 
 .bg-white {
@@ -5210,7 +5209,8 @@ p:first-letter {
 .titles__h4,
 .titles__h5,
 .titles__h6 {
-    font-weight: 400
+    font-weight: 400;
+    word-break: break-word;
 }
 
 .titles__h1 {
