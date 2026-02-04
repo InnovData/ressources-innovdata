@@ -5827,6 +5827,14 @@ p:first-letter {
     justify-content: center
 }
 
+.features__textImage:has(figure:not(.order-1)) .features__image::after {
+    transform: translate(-10%, -10%);
+}
+
+.features:hover .features__textImage:has(figure:not(.order-1)) .features__image::after {
+	transform: translate(-15%, -15%);
+}
+
 @media screen and (min-width:768px) {
     .features__textImage {
         justify-content: space-between
